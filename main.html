@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    <meta charset="UTF-8">
+    <title>shayan</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    </head>>
+    <body>
+        <div class="error" id="error">
+        <!--      فقط برای نمایش ارور-->
+        </div>
+        <div class="big-container"><!--فرم اصلی که وسط صفحه است-->
+                <div class="left-container"> <!--بخش چپ-->
+                    <form id="form1">
+
+                        <h1>Mr or Ms ?</h1>
+                        <div class="form2" style="display:flex; flex-direction: row; justify-content: center; align-items: center"><!--بخش وارد کردن اسم-->
+                            <label for="name">Name: </label>
+                            <br />
+                            <input type="text"  id="name" name="name" maxlength="254" required />
+                        </div>
+                        <br>
+                        <div class="rs"><!--دکمه های رادیویی جنسیت-->
+                            <label for="gender1"><input type="radio" id="gender1" name="gender" value="male"/> Male</label>
+                            <br>
+                            <label for="gender2"><input type="radio" id="gender2" name="gender" value="female" > Female</label>
+                        </div>
+
+                        <button type="submit" class="btn" id="submit-button">Submit</button>
+                        <button type="submit" class="btn" style="margin-top: 5px;" id="save-button">Save</button>
+                        <p id="alert" style="display: flex;justify-content: center;color: red;"></p>
+                    </form>
+                </div>
+
+                <div class="right_container"><!--بخش سمت راست-->
+                    <div >
+                        <h2>Prediction</h2>
+                        <div class="inner-right-container"><!--نمایش اطلاعات اسم-->
+                            <p id="gender-status" style="display: flex;justify-content: center;"></p>
+                            <p id="percentage" style="display: flex;justify-content: left;"></p>
+                        </div>
+
+
+                        <div class="inner-right-container" style="border-style: dotted;border-width: 2px;padding: 5px;"><!-- بخش ذخیره جنسیت-->
+                            <h1>Saved Answer</h1>
+                            <p id="status-saved" style="display: flex;justify-content: left;"></p>
+                        <button type="submit" class="btn" id="clear-button">Clear</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <script type="text/javascript"  src="scripts.js" charset="utf-8"></script>
+
+    </body>
+
+</html>

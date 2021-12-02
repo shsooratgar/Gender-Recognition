@@ -1,0 +1,112 @@
+* {
+ /*
+ ویژگی های کلی(ندارد)
+ */
+}
+
+/* تنظیم پس زمینه و نمایش کلی */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("galaxy.gif");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* فرم اصلی در وسط صفحه که از دو فرم (ستون) چپ و راست تشکیل شده است
+*/
+.big-container {
+    height: 40%;
+    width: 40%;
+    padding: 10px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
+    opacity: 0.75;
+}
+
+/* استفاده از flex برای تنظیم مکان در بخش چپ*/
+.left-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+
+/* استفاده از flex برای تنظیم مکان در بخش راست*/
+.right-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* تنظیم جزیی  نوشته ها */
+.form1 {
+    text-align: left;
+}
+
+/* بخش مربوط به دکمه ها */
+.btn {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 34px;
+    background: rgb(204, 0, 255);
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+/* تنظیم جزیی  نوشته ها */
+.form2 {
+    text-align: left;
+
+}
+/* تنظیم اجرای داخلی هر کدام از دو ستون */
+.inner-right-container {
+    display: block;
+    margin: 5px;
+}
+.inner-right-container{
+    justify-content: center;
+}
+
+
+/* radio style */
+.rs {
+    margin: 8px;
+    display: inline-block;
+}
+
+label {
+    display: block;
+    margin: 3px;
+}
+/*زمانی که ارور می دهد
+ */
+.error {
+    position: fixed;
+    width: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 50px;
+    color: white;
+    background-color: rgb(231, 67, 67);
+
+    font-size: 18px;
+
+    left: 0;
+    bottom: 0;
+    transition: width 3s linear;
+}
